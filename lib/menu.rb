@@ -6,7 +6,7 @@ class Menu
     { name: "Fish and Chips", price: 12.99 }
   ]
 
-  def dishes #used to access the Menu Items
+  def self.dishes #used to access the Menu Items
     MENU_ITEMS
   end
 
@@ -15,4 +15,5 @@ class Menu
       puts "#{item[:name]} - $#{item[:price]}"
     end
   end
+  
 end
