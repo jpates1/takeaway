@@ -1,11 +1,10 @@
-require_relative "menu"
 class Order
-  def initialize
-    @menu_items = Menu.dishes
+  def initialize(menu)
+    @menu_items = menu.dishes
     @order = []
   end
 
-  def add(dish)
+  def select(dish)
     raise  ArgumentError, "Not a string." unless dish.is_a?(String)
     raise  ArgumentError, "Please include a dish, cannot be empty." if dish.empty?
 
@@ -27,3 +26,8 @@ class Order
   end
 
 end
+
+# menu = Menu.new
+# order = Order.new
+# order.select("Fish and Chips")
+# p order.all

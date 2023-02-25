@@ -1,7 +1,7 @@
 require "menu"
 
 RSpec.describe "@Menu" do
-  it "displays items in the menu" do
+  it "returns items in the menu" do
     menu = Menu.new
     result = [
       { name: "Pizza Margherita", price: 8.99 },
