@@ -30,7 +30,7 @@ RSpec.describe "integration" do
         order.select("Pizza Margherita")
         order.select("Fish and Chips")
         order.select("Fish and Chips")
-        expect(receipt.print_receipt).to eq "Thank you for your order.\n------------------------\nYou have ordered 3 items:\nPizza Margherita, Qty 1,-----------\nTotal: £34.97\n------------------------\nYou will shortly receive a text confirmation."
+        expect(receipt.print_receipt).to eq "Thank you for your order.\n------------------------\nYou have ordered 3 items:\nPizza Margherita, Qty 1, £8.99\nFish and Chips, Qty 2, £12.99\n------------------------\nTotal: £34.97\n------------------------\nYou will shortly receive a text confirmation."
       end
     end
   end
